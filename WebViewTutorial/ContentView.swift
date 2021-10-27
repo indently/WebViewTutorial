@@ -22,7 +22,7 @@ struct ContentView: View {
             
             // Create a link that opens in a new window
             Link(destination: URL(string: urlString)!, label: {
-                Text("Open Link")
+                Text("Open in new window")
                     .foregroundColor(.blue)
             })
             
@@ -30,7 +30,7 @@ struct ContentView: View {
             Button {
                 showWebView.toggle()
             } label: {
-                Text("Open Link 2")
+                Text("Open in a sheet")
             }
             .sheet(isPresented: $showWebView) {
                 WebView(url: URL(string: urlString)!)
